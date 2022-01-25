@@ -1,0 +1,3 @@
+Untitled - Date(EDW.VW_ARTICLE.Article_Create_Date) >= dateadd(day,  - (DayofWeek(Current_Date()) + 30),Current_Date())  
+Last Week - td.Year_Week = (Select Year_Week From EDW.VW_TIME_DIMENSION Where Cal_Date = Previous_Day(Current_Date(), 'Saturday'))
+Last Week LY - td.Year_Week = (Select Year_Week From EDW.VW_TIME_DIMENSION Where Cal_Date = Select DateAdd(year,-1,Previous_Day(Current_Date(), 'Saturday')))
